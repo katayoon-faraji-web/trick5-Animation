@@ -1,0 +1,804 @@
+*,*::after,*::before{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(21, 21, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation-name: bgcolor;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    >div{
+        
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        // animation-direction: alternate;
+        animation-iteration-count: infinite;
+        position: absolute;
+        height: 100%;
+        width: 12.5%;
+        top: 0;
+        $temp:0;
+        @for $j from 1 through 8{
+            &:nth-of-type(#{$j}){
+                left:$temp+0%;
+            }
+            $temp:$temp+12.5;
+        }
+        &:nth-of-type(1){
+            background-color: pink;
+            animation-name: bg;
+        }
+        &:nth-of-type(2){
+            background-color: orange;
+            animation-name: bg;
+        }
+        &:nth-of-type(3){
+            background-color: yellowgreen;
+            animation-name: bg;
+        }
+        &:nth-of-type(4){
+            background-color:  rgb(30, 203, 242);
+            animation-name: bg;
+        }
+        &:nth-of-type(5){
+            background-color:  rgb(33, 35, 163);
+            animation-name: bg;
+        }
+        &:nth-of-type(6){
+            background-color:rgb(200, 26, 200);
+            animation-name: bg;
+        }
+        &:nth-of-type(7){
+            background-color: yellow;
+            animation-name: bg;
+        }
+        &:nth-of-type(8){
+            background-color: rgb(235, 45, 61);
+            animation-name: bg;
+        }
+        &:nth-of-type(9){
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:300px;
+            width: 300px;
+            top:50%;
+            left: 40%;
+            font-size: 100px;
+            transform: rotate(90deg);
+            animation-name: icon1;
+        }
+
+        
+    }
+    >section{
+        width: 70%;
+        height: 400px;
+        position: relative;
+        
+        >.circles {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            >*{
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                // animation-direction: alternate;
+                animation-iteration-count: infinite;
+                
+            }
+            span{
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                // animation-direction: alternate;
+                animation-iteration-count: infinite;
+                color: white;
+            }
+            >.bigCircle{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                
+
+                &:nth-of-type(1){
+                    background-color: pink;
+                    animation-name: bigcircles1;
+                    >span{
+                        animation-name: span1;
+                    }
+                    
+
+                }
+                &:nth-of-type(2){
+                    background-color: orange;
+                    animation-name: bigcircles2;
+                    >span{
+                        animation-name: span2;
+                    }
+                }
+                &:nth-of-type(3){
+                    background-color: greenyellow;
+                    animation-name: bigcircles3;
+                    >span{
+                        animation-name: span3;
+                    }
+                }
+                &:nth-of-type(4){
+                    background-color: rgb(30, 203, 242);
+                    animation-name: bigcircles4;
+                    >span{
+                        animation-name: span4;
+                    }
+                }
+                &:nth-of-type(5){
+                    background-color: rgb(33, 35, 163);
+                    animation-name: bigcircles5;
+                    >span{
+                        animation-name: span5;
+                    }
+                }
+                &:nth-of-type(6){
+                    background-color: rgb(200, 26, 200);
+                    animation-name: bigcircles6;
+                    >span{
+                        animation-name: span6;
+                    }
+                }
+                &:nth-of-type(7){
+                    background-color: yellow;
+                    animation-name: bigcircles7;
+                    >span{
+                        animation-name: span7;
+                    }
+                }
+                &:nth-of-type(8){
+                    background-color: rgb(235, 45, 61);
+                    animation-name: bigcircles8;
+                    >span{
+                        animation-name: span8;
+                    }
+                }
+                &:nth-of-type(9){
+                    background-color: bisque;
+                    animation-name: bigcircles9;
+                    >span{
+                        animation-name: span9;
+                        color: balck;
+                    }
+                }
+                position: relative;
+                >span{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+
+                }
+                >div{
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color:inherit;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    transform-origin: 35px 50% ;
+                    $temp:0;
+                    animation-name: span1;
+                    @for $i from 1 through 12{
+                        &:nth-of-type(#{$i}){
+                            transform:translate(-50%,-50%) rotateZ($temp +deg) translate(80px) ;
+                        }
+                        $temp:$temp+30;
+
+                    }
+                    
+                }
+               
+            }
+    
+        }
+      
+    }
+}
+@keyframes span1 {
+    0%{
+        background-color: rgba(255, 255, 255, 0.607);
+
+    }
+   
+    57%{
+        background-color: rgba(255, 255, 255, 0);
+
+
+    }
+    65%{
+        background-color: red;
+    }
+    
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles1 {
+    0%{
+        transform: translateY(-900px);
+
+    }
+    5%{
+        transform: translateY(0);
+        
+    }
+    10%{
+        transform: scale(2.5);
+
+        
+    }
+    12%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles2 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    10%{
+        transform: translateY(0);
+        
+    }
+    20%{
+        transform: scale(2.5);
+        
+    }
+    22%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+  
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles3 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    15%{
+        transform: translateY(0);
+        
+    }
+    25%{
+        transform: scale(2.5);
+        
+    }
+    27%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles4 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    20%{
+        transform: translateY(0);
+        
+    }
+    30%{
+        transform: scale(2.5);
+        
+    }
+    32%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles5 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    25%{
+        transform: translateY(0);
+        
+    }
+    35%{
+        transform: scale(2.5);
+        
+    }
+    37%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles6 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    30%{
+        transform: translateY(0);
+        
+    }
+    40%{
+        transform: scale(2.5);
+        
+    }
+    42%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles7 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    35%{
+        transform: translateY(0);
+        
+    }
+    45%{
+        transform: scale(2.5);
+        
+    }
+    47%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles8 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    40%{
+        transform: translateY(0);
+        
+    }
+    50%{
+        transform: scale(2.5);
+        
+    }
+    52%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes bigcircles9 {
+    0%{
+        transform: translateY(-900px);
+        color: inherit;
+
+    }
+    45%{
+        transform: translateY(0);
+        
+    }
+    55%{
+        transform: scale(2.5);
+        
+    }
+    57%{
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5);
+
+        
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+
+    }
+}
+@keyframes span1 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    40%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color: pink;
+        font-size: 30px;
+    }
+    65%{
+
+        background-color: pink;
+        font-size: 30px;
+    }
+    66%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span2 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+        
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color: orange;
+    }
+    65%{
+        font-size: 30px;
+        background-color: orange;
+    }
+    67%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span3 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color: yellowgreen;
+    }
+    65%{
+        font-size: 30px;
+        background-color: yellowgreen;
+    }
+    68%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span4 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color:rgb(30, 203, 242);
+    }
+    65%{
+        font-size: 30px;
+        background-color: rgb(30, 203, 242);
+    }
+    69%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+
+@keyframes span5 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color:rgb(33, 35, 163);
+    }
+    65%{
+        font-size: 30px;
+        background-color: rgb(33, 35, 163);
+    }
+    70%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+
+@keyframes span6 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color:rgb(200, 26, 200);
+    }
+    65%{
+        font-size: 30px;
+        background-color: rgb(200, 26, 200);
+    }
+    71%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span7 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color:yellow;
+    }
+    65%{
+        font-size: 30px;
+        background-color: yellow;
+    }
+    72%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span8 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color: rgb(235, 45, 61);;
+    }
+    65%{
+        font-size: 30px;
+        background-color:  rgb(235, 45, 61);
+    }
+    73%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes span9 {
+    0%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    45%{
+
+        background-color:  rgba(255, 255, 255, 0);
+    }
+    50%{
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    65%{
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    73%{
+
+        background-color: rgba(255, 255, 255, 0);
+    }
+    88%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes bg {
+    0%{
+        width: 0;
+    }   
+    60%{
+        width: 0;
+    } 
+    70%{
+        width: 12.5%;
+    }
+
+    81%{
+        width: 0;
+        
+    }
+    100%{
+        width: 0;
+        
+    }
+}
+@keyframes icon1 {
+    0%{
+        opacity:0;
+    }
+    40%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    
+    95%{
+        opacity: 1;
+        left: 70%;
+    }
+    100%{
+
+        opacity: 0;
+    }
+    
+}
+@keyframes bgcolor {
+    0%{
+        background-color: (21, 21, 40);
+    }
+    80%{
+        background-color:  rgb(21, 21, 40);
+    }
+    85%{
+        background-color: white;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
