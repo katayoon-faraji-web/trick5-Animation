@@ -1,7 +1,7 @@
-# trick5
+# trick5-Animation
 https://github.com/katayoon-faraji-web/trick5/assets/144775981/6ae9f0c5-193e-41c9-95e0-ebd2e5c6616e
 
-- [Demo Project](https://katayoon-faraji-web.github.io/trick5/)
+- [Demo Project](https://katayoon-faraji-web.github.io/trick5-Animation/)
 
 - Developed by katayoon faraji
 
